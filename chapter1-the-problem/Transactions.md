@@ -31,3 +31,5 @@ concurrency control and recovery components, whose goal is to realize transactio
 
 A database consists of a set of named data items. Each data item has a value. The values of data items at any one time
 comprise the *state* of the database.
+
+In practice, a data item could be a word of main memory, a page of disk, a record of a file, or a field of a record.
