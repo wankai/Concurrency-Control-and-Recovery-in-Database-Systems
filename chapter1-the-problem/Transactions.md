@@ -15,3 +15,6 @@ concurrency control and recovery applies to any such systems that conforms to ou
 The main component of this model is *transaction*. Infomally, a transaction is an execution of a program that accesses
 a shared database. The goal of concurrency control and recovery is to ensure that transactions execute atomically
 meaning that
+
+1. each transaction
+2. if a transaction
