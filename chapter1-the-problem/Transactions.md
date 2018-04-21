@@ -102,3 +102,19 @@ contains the balance in one account. A Useful transaction for this database is o
      return
  end
  ```
+
+The choice of language for expressing transactions is not important to our study of concurrency control and recovery.
+In practice, the languge could be a database query language, a report writing language, or a high level programming
+language augmented with database operations. No matter how the transaction is expressed, it must eventually be translated
+into programs that issue database operations, since database operations are the only way to access the database. We
+therefore assume that the programs that comprise transactions are written in a high level language with embeded database
+operations.
+
+Transfer is an unrealistic program in that it doesn't perform any error checking, such as testing for incorrect input.
+ Although such error checking is essential if application programs are to be reliable, it is unimportant to our
+ understanding of concurrency control and recovery problems. Therefore, to keep our example programs short, we will ignore
+ error checking in those programs.
+ 
+ #### Commit and Abort
+ 
+ 
