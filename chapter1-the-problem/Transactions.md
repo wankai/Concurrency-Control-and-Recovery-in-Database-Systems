@@ -32,4 +32,7 @@ concurrency control and recovery components, whose goal is to realize transactio
 A database consists of a set of named data items. Each data item has a value. The values of data items at any one time
 comprise the *state* of the database.
 
-In practice, a data item could be a word of main memory, a page of disk, a record of a file, or a field of a record.
+In practice, a data item could be a word of main memory, a page of disk, a record of a file, or a field of a record. The
+size of data item contained in a data item is call granualarity of the data item. Granualarity will usually be unimportant
+to our study and we will therefore leave it unspecified. When we leave granualarity unspecified, we denote data items by
+lower case letters, typically x, y, and z.
