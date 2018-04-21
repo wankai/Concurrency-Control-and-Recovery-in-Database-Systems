@@ -16,5 +16,5 @@ The main component of this model is *transaction*. Infomally, a transaction is a
 a shared database. The goal of concurrency control and recovery is to ensure that transactions execute atomically
 meaning that
 
-> 1. each transaction accesses shared data without interfering with other transactions, and 
-> 2. if a transaction terminate normally, then all of it's effects are made permanent; otherwise it has no effect at all
+1. each transaction accesses shared data without interfering with other transactions, and 
+2. if a transaction terminate normally, then all of it's effects are made permanent; otherwise it has no effect at all
