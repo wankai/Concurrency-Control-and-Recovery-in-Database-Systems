@@ -53,5 +53,13 @@ this order:
 2. after step(1) is finished, concurrently execute Write(x, 1) and Read(y);
 3. after step(2) is finished, execute Write(y, 0).
 
-Although Write(x, 1) and Read(y) were executed concurrently, they maybe regarded as having execute atomically. This is 
-because the execution just given has the same effect as a sequential execution, such as Read(x), Write(x, 1), Read(y), Write(y, 0) 
+Although Write(x, 1) and Read(y) were executed concurrently, they maybe regarded as having executed atomically. This is 
+because the execution just given has the same effect as a sequential execution, such as Read(x), Write(x, 1), Read(y), Write(y, 0) .
+
+The DBS also supports transaction operations: Start, Commit, Abort. A program tells the DBS that it is about to begin
+executing a new transaction by issuing the operation Start. It indicates the termination of the transaction by issuing
+either the operation Commit or the opreation Abort. By issuing a Commit, the program tells the DBS that the transaction
+has terminated normally and all of its effects should be made permanent. By issuing an Abort, the program tells the DBS
+the transaction has terminated abnormally and all of its effects should be obliterated.
+
+
