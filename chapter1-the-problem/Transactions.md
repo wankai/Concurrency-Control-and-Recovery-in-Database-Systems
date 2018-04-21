@@ -18,3 +18,8 @@ meaning that
 
 1. each transaction accesses shared data without interfering with other transactions, and 
 2. if a transaction terminates normally, then all of its effects are made permanent; otherwise it has no effect at all.
+
+The purpose of this chapter is to make this model precise.
+
+In this section we present a user-oriented model of the system, Which consists of a database that a user can access
+by executing transactions.
