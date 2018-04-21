@@ -29,4 +29,5 @@ concurrency control and recovery components, whose goal is to realize transactio
 
 #### Database System
 
-A database consists of a set of named data items. Each data item has a value.
+A database consists of a set of named data items. Each data item has a value. The values of data items at any one time
+comprise the *state* of the database.
