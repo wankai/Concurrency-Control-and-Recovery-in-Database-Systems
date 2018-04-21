@@ -42,4 +42,6 @@ database operations (or simply operations). The most important operations we wil
 return the value of data item x. Write(x, val) changes the value of x to val. We will use other operations from time to time.
 
 The DBS executes each operation atomically. This means that the DBS behaves as if it executes operations sequentially, that
-is, one at a time.
+is, one at a time. To obtain this behavior, ths DBS might actually execute operations sequentially. However, more typically
+it will execute operations concurrently. That is, There may be time when it is executing more than one operations at once.
+However, even if it executes operations concurrently, the final effect must be the same as some sequential execution.
