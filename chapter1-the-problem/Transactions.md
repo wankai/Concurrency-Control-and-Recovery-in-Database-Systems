@@ -36,3 +36,6 @@ In practice, a data item could be a word of main memory, a page of disk, a recor
 size of data item contained in a data item is call granualarity of the data item. Granualarity will usually be unimportant
 to our study and we will therefore leave it unspecified. When we leave granualarity unspecified, we denote data items by
 lower case letters, typically x, y, and z.
+
+A database system (DBS) is collection of hardware and software modules that support commands to access the database, called
+database operations (or simply operations). The most important operations we will consider are Read and Write. 
