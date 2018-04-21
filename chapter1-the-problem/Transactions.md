@@ -22,4 +22,7 @@ meaning that
 The purpose of this chapter is to make this model precise.
 
 In this section we present a user-oriented model of the system, Which consists of a database that a user can access
-by executing transactions.
+by executing transactions. In Section 1.2, we explain what is means for a transaction to execute atomically in the presence
+failures. In Section 1.3, We explain what it means for a transaction to execute atomically in an environment where its
+database access can be interleaved with those of other transactions. Section 1.4 presents a model of database system's
+concurrency control and recovery components, whose goal is to realize transaction atomicity.
