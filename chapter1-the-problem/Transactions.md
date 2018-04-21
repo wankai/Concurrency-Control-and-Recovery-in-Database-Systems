@@ -73,4 +73,32 @@ to the DBS before ths DBS has responded to either one. However, the transaction'
 Thus, the DBS must refuse to process a transaction's database operation if it arrives after the DBS has already executed
 the transaction's Commit or Abort.
 
+#### Transaction Syntax
 
+Users interact with a DBS by invoking programs. From the User's viewpoint, a transaction is the execution of one or more
+programs that include database and transaction operations.
+
+For example, consider a banking database that contains a file of customer accounts, called Accounts, each entry of which
+contains the balance in one account. A Useful transaction for this database is one that transfers money from one account
+ to another.
+ 
+ ```c++
+ Procedure Transfer Begin
+     Start;
+     input(from_account, to_account, amount);
+     // This procedure transfers "amount" from "from_account" to "to_account"
+     temp := Read(Accounts[from_account];
+     if temp < amount then begin
+         output("insufficient funds");
+         Abort;
+     else begin
+         Write(Accounts(from_account), temp - amount);
+         temp := Read(Accounts[to_account]);
+         Write(Accounts(to_account), temp + amount);
+         Commit;
+         output("transfer completed");
+     end
+     
+     return
+ end
+ ```
