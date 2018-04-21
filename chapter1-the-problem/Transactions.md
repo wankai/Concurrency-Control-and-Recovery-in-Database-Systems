@@ -11,3 +11,6 @@ We will study these problems using a model of database systems. This model is ab
 handling systems, such as database management systems of data processing applications, transaction processing system
 for airline reservations or banking, and file systems for a general purpose computing environment. Our study of
 concurrency control and recovery applies to any such systems that conforms to our model.
+
+The main component of this model is *transaction*. Infomally, a transaction is an execution of a program that accesses
+a shared database.
