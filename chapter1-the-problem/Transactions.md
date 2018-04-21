@@ -62,4 +62,9 @@ either the operation Commit or the opreation Abort. By issuing a Commit, the pro
 has terminated normally and all of its effects should be made permanent. By issuing an Abort, the program tells the DBS
 the transaction has terminated abnormally and all of its effects should be obliterated.
 
+A program must issue each of its database operations on behalf of a particular transaction. We can model this by assuming
+that the DBS response to a Start by returning a unique transaction identifier. then Program then attach this identifier
+to each of its database operations, and to the Commit or Abort that it issues to terminate the transaction. Thus, from the
+DBS's view-point, a transaction is defined by a Start operation, followed by a (possibly concurrent), execution a set of
+database operations, followed by Commit or Abort.
 
