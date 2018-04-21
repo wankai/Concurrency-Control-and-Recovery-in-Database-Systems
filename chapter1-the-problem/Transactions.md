@@ -45,3 +45,13 @@ The DBS executes each operation atomically. This means that the DBS behaves as i
 is, one at a time. To obtain this behavior, ths DBS might actually execute operations sequentially. However, more typically
 it will execute operations concurrently. That is, There may be time when it is executing more than one operations at once.
 However, even if it executes operations concurrently, the final effect must be the same as some sequential execution.
+
+For example, suppose data items x and y are stored on two different device. The DBS might execute operations on x and y in
+this order:
+
+1. execute Read(x);
+2. after step(1) is finished, concurrently execute Write(x, 1) and Read(y);
+3. after step(2) is finished, execute Write(y, 0).
+
+Although Write(x, 1) and Read(y) were executed concurrently, they maybe regarded as having execute atomically. This is 
+because the execution just given has the same effect as a sequential execution, such as Read(x), Write(x, 1), Read(y), Write(y, 0) 
