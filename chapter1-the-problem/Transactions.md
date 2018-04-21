@@ -9,4 +9,5 @@ systems, among others. In this book, We will explore concurrency control and rec
 
 We will study these problems using a model of database systems. This model is abstraction of many types of data
 handling systems, such as database management systems of data processing applications, transaction processing system
-for airline reservations or banking, and file systems for a general purpose computing environment.
+for airline reservations or banking, and file systems for a general purpose computing environment. Our study of
+concurrency control and recovery is to ensure such systems that conforms to our model.
