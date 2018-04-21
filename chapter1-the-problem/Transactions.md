@@ -17,4 +17,4 @@ a shared database. The goal of concurrency control and recovery is to ensure tha
 meaning that
 
 1. each transaction accesses shared data without interfering with other transactions, and 
-2. if a transaction terminate normally, then all of it's effects are made permanent; otherwise it has no effect at all
+2. if a transaction terminates normally, then all of its effects are made permanent; otherwise it has no effect at all.
