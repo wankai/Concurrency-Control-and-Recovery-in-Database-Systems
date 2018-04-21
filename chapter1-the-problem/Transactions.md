@@ -40,3 +40,6 @@ lower case letters, typically x, y, and z.
 A database system (DBS) is collection of hardware and software modules that support commands to access the database, called
 database operations (or simply operations). The most important operations we will consider are Read and Write. Read(x)
 return the value of data item x. Write(x, val) changes the value of x to val. We will use other operations from time to time.
+
+The DBS executes each operation atomically. This means that the DBS behaves as if it executes operations sequentially, that
+is, one at a time.
