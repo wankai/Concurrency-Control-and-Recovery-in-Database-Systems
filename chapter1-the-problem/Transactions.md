@@ -68,3 +68,9 @@ to each of its database operations, and to the Commit or Abort that it issues to
 DBS's view-point, a transaction is defined by a Start operation, followed by a (possibly concurrent), execution a set of
 database operations, followed by Commit or Abort.
 
+A transaction maybe be a concurrent execution of two or more programs. That is, the transaction may submit two operations
+to the DBS before ths DBS has responded to either one. However, the transaction's last operation must be a Commit or Abort.
+Thus, the DBS must refuse to process a transaction's database operation if it arrives after the DBS has already executed
+the transaction's Commit or Abort.
+
+
